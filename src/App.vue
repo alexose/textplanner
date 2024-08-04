@@ -168,6 +168,8 @@ Prompt: "Today I need to do laundry, grind coffee, go to the hardware store (20 
                 const cursorY = event.clientY - rect.top;
                 const scrollRatio = (cursorY + dayView.scrollTop) / dayView.scrollHeight;
 
+                console.log(event.deltaY);
+
                 if (event.deltaY < 0) {
                     // Zoom in
                     this.hourHeight = Math.min(this.hourHeight + 10, 200);
